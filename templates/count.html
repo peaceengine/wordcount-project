@@ -1,0 +1,16 @@
+<h1> Count results </h1>
+<h1> There were {{count}} words in your text</h1>
+
+<a href = "{% url 'home' %}"> Start again </a>
+
+<br>
+<h1> Word dictionary: </h1>
+{% for word, countTotal in sortedWords %}
+{{ word }}
+<br/>
+{{ countTotal }}
+<br/>
+{% endfor %}
+<br/>
+<h1> Your text has 10 words in. Text follows: </h1>
+<h4> {{ fullText }} </h4>
